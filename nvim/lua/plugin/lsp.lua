@@ -45,7 +45,9 @@ return {
     local lsp = require("lsp-zero").preset({})
 
     lsp.ensure_installed({
-      'rust_analyzer',
+      'clangd',
+      'gopls',
+      'lua_ls',
     })
 
     -- Fix Undefined global 'vim'
