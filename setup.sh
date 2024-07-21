@@ -8,6 +8,7 @@ echo "setting up fish shell..."
 sudo apt install fish
 cp -a ./fish/. ~/.config/fish/
 source ~/.config/fish/config.fish
+fish
 
 echo "setting up neovim..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -18,6 +19,10 @@ sudo mv squashfs-root /
 sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 rm -rf ./squashfs-root/
 rm ./nvim.appimage
+
+# setup neovim dependencies
+sudo apt install ripgrep
+sudo apt install fd-find
 
 # setting up neovim config
 cp -a ./nvim/. ~/.config/nvim/
