@@ -2,4 +2,10 @@
  - nvim
  - fish
  - starship
- - i3
+
+## install on devpod or Linux
+- git clone this report and run setup
+```bash
+./setup.sh
+```
+
