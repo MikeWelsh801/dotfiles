@@ -8,7 +8,6 @@ echo "setting up fish shell..."
 sudo apt install fish
 cp -a ./fish/. ~/.config/fish/
 source ~/.config/fish/config.fish
-fish
 
 echo "setting up neovim..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -26,4 +25,5 @@ sudo apt install fd-find
 
 # setting up neovim config
 cp -a ./nvim/. ~/.config/nvim/
+fish
 nvim
