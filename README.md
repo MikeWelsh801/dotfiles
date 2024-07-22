@@ -6,6 +6,6 @@
 ## install on devpod or Linux
 - git clone this report and run setup
 ```bash
-./setup.sh
+git clone https://github.com/MikeWelsh801/dotfiles && ./setup.sh
 ```
 
