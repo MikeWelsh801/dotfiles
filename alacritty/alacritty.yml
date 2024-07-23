@@ -1,0 +1,28 @@
+shell:
+  "fish"
+
+live_config_reload:
+  true
+
+font:
+  normal:
+    family:
+      "JetBrainsMono NerdFontMono"
+    style:
+      "SemiBold"
+  size:
+    15
+
+window:
+  padding:
+    x: 10
+    y: 5
+  decorations:
+    "None"
+  opacity:
+    0.9
+  dynamic_padding:
+    true
+  startup_mode:
+    "Windowed"
+

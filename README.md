@@ -2,6 +2,8 @@
  - nvim
  - fish
  - starship
+ - alacritty
+ - i3
 
 ## install on devpod or Linux
 - git clone this repo and run setup
