@@ -46,7 +46,6 @@ return {
 
     lsp.ensure_installed({
       'clangd',
-      'gopls',
       'lua_ls',
     })
 
