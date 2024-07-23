@@ -4,7 +4,7 @@ if status is-interactive
     alias v="nvim"
     alias g="git"
     alias bat="batcat"
-    alias fetch="git config --global credentials.helper store"
+    alias fetch="git config --global credential.helper store"
 
     # don't say hello
     set -g fish_greeting
