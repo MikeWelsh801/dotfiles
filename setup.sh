@@ -22,6 +22,7 @@ rm ./nvim.appimage
 # setup neovim dependencies
 sudo apt install ripgrep
 sudo apt install fd-find
+sudo apt install bat
 
 # setting up neovim config
 cp -a ./nvim/. ~/.config/nvim/
