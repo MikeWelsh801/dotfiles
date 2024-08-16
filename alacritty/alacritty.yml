@@ -1,5 +1,10 @@
+import:
+  - "~/.config/alacritty/themes/themes/base16_default_dark"
 shell:
   "fish"
+
+env:
+  term: "xterm-265color"
 
 live_config_reload:
   true
@@ -20,7 +25,7 @@ window:
   decorations:
     "None"
   opacity:
-    0.9
+    1
   dynamic_padding:
     true
   startup_mode:

@@ -1,0 +1,20 @@
+import = [
+    "~/.config/alacritty/themes/themes/tender.toml"
+]
+
+[shell]
+program = "/usr/bin/fish"
+
+[window]
+dynamic_padding = true
+opacity = 0.97
+padding = {x = 10, y = 5}
+
+[env]
+term = "xterm-265color"
+
+[font]
+normal = {family = "JetBrainsMono NerdFontMono", style = "SemiBold"}
+italic = {family = "JetBrainsMono NerdFontMono", style = "Italic"}
+bold = {family = "JetBrainsMono NerdFontMono", style = "Bold"}
+size = 15 
