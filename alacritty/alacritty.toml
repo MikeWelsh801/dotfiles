@@ -7,8 +7,10 @@ program = "/usr/bin/fish"
 
 [window]
 dynamic_padding = true
-opacity = 0.995
-padding = {x = 10, y = 5}
+opacity = 0.99
+padding = {x = 2, y = 0}
+decorations = "None"
+blur = true
 
 [env]
 term = "xterm-265color"
