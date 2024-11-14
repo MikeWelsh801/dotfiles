@@ -1,7 +1,8 @@
 return {
   "VonHeikemen/lsp-zero.nvim",
   branch = "v2.x",
-  event = "CursorMoved",
+  lazy = false,
+  -- event = "CursorMoved",
   dependencies = {
     -- LSP Support
     { "neovim/nvim-lspconfig" },
