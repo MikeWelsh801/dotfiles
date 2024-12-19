@@ -26,5 +26,5 @@ sudo apt install bat
 
 # setting up neovim config
 cp -a ./nvim/. ~/.config/nvim/
-# fish
+fish
 # nvim

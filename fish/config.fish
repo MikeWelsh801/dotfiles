@@ -9,5 +9,8 @@ if status is-interactive
     # don't say hello
     set -g fish_greeting
 
-    starship init fish | source
+    # the newest starship pull broke their install for fish, so you have to use
+    # the janky ass sed command on the second line for now
+    # starship init fish | source
+    starship init fish --print-full-init | sed 's/"$(commandline)"/(commandline | string collect)/' | source
 end
