@@ -4,6 +4,7 @@ if status is-interactive
     alias v="nvim"
     alias g="git"
     alias bat="batcat"
+    alias build="mk build && cmake .. && make -j(nproc) && sudo make install && sudo ldconfig"
     alias fetch="git config --global credential.helper store"
 
     # don't say hello
