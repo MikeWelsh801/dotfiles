@@ -302,7 +302,12 @@ format = '\[[$time]($style)\]'
 disabled = false
 
 [username]
-format = '\[[$user]($style)\]'
+format = '[$user]($style)@'
+show_always = true
+
+[hostname]
+format = '[$hostname]($style) '
+ssh_only = false
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'
