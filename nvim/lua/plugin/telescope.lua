@@ -14,6 +14,7 @@ return {
             builtin.grep_string({ search = vim.fn.input("Grep > ") });
         end)
         vim.keymap.set('n', '<leader>td', ':TodoTelescope<cr>', { silent = true })
+        vim.keymap.set('n', '<leader>ms', ':Telescope session-lens<cr>', { silent = true })
 
         require('telescope').setup {
             defaults = {
