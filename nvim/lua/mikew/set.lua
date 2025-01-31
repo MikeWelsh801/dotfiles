@@ -51,6 +51,8 @@ opt.list = false
 -- don't add eol that conflicts with vscode users
 opt.fixeol = false
 
+opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 -- sets highlighting when you yank something
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',

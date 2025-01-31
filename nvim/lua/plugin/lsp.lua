@@ -24,7 +24,7 @@ return {
     { "rafamadriz/friendly-snippets",     lazy = true },
   },
   config = function()
-    require("lua.config.snippets")
+    require("config.snippets")
 
     -- lsp
     local lsp = require("lsp-zero").preset({})
@@ -87,6 +87,7 @@ return {
       },
       mapping = {
         ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-f>"] = cmp.mapping.confirm({ select = true }),
         ["<C-Space>"] = cmp.mapping.complete(),
         -- ["<C-n>"] = cmp_action.luasnip_jump_forward(),
         -- ["<C-p>"] = cmp_action.luasnip_jump_backward(),
