@@ -10,14 +10,14 @@ cp -a ./fish/. ~/.config/fish/
 source ~/.config/fish/config.fish
 
 echo "setting up neovim..."
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-sudo chmod u+x nvim.appimage
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
 # exracting app image and making it accessable
-./nvim.appimage --appimage-extract
+./nvim-linux-x86_64.appimage --appimage-extract
 sudo mv squashfs-root /
 sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 rm -rf ./squashfs-root/
-rm ./nvim.appimage
+rm ./nvim-linux-x86_64.appimage
 
 # setup neovim dependencies
 sudo apt install ripgrep
