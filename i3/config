@@ -16,8 +16,9 @@ set $mod Mod4
 font pango:JetBrainsMono Nerd Font 10
 
 default_border pixel 2
-default_floating_border pixel 1
+default_floating_border pixel 2
 gaps inner 5
+gaps outer -4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -27,23 +28,23 @@ gaps inner 5
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 # background
-exec --no-startup-id feh --bg-scale ~/Downloads/pexels-sagui-andrea-200115-618833.jpg
+exec --no-startup-id feh --bg-scale ~/Downloads/pexels-jayscape-artist-12343639.jpg
 # monitors
 exec --no-startup-id xrandr --output "DisplayPort-0" --primary --left-of "eDP"
-# exec --no-startup-id xrandr --output "HDMI-A-0" --primary --left-of "eDP"
+exec --no-startup-id xrandr --output "HDMI-A-0" --primary --left-of "eDP"
+# exec --no-startup-id xrandr --output "HDMI-A-0" --primary --above "eDP"
 # transparency
 exec --no-startup-id picom &
 # scrolling and tap to click
 exec --no-startup-id xinput set-prop "DELL0A78:00 27C6:0D42 Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput set-prop "DELL0A78:00 27C6:0D42 Touchpad" "libinput Natural Scrolling Enabled" 1
 
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/betterlockscreen-main/lock.sh --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -62,15 +63,16 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec ghostty
+bindsym $mod+shift+x exec /home/mikewelsh/betterlockscreen-main/lock.sh
 
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -b
+bindsym $mod+shift+d exec --no-startup-id dmenu_run -b
 # A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -91,7 +93,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
-bindsym $mod+Shift+ move right
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -100,10 +102,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+o split h
+bindsym $mod+o split v
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle

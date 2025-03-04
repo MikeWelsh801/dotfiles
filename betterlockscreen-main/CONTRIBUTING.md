@@ -1,0 +1,9 @@
+# Contributing to Betterlockscreen
+
+Thanks to all the amazing people for all your wonderful PRs, issues and ideas, all contributions are welcome!
+
+We are using [next](https://github.com/betterlockscreen/betterlockscreen/tree/next) as our development-branch and master for the latest stable release. Please provide your pull-requests based on our next-branch.
+
+For Nix(OS)-Users: We provide a `flake.nix` with devShell for development :-)
+
+Thanks
