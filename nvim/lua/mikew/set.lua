@@ -6,6 +6,10 @@ opt.relativenumber = true
 -- I'm not sold on this, but I'll try it out.
 opt.cursorline = true
 
+vim.cmd([[
+    set rtp^="/home/newuser/.opam/default/share/ocp-indent/vim"
+]])
+
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
@@ -32,7 +36,7 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
-opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80"
 
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
