@@ -133,7 +133,7 @@ font-feature =
 # depending on your `window-inherit-font-size` setting. If that setting is
 # true, only the first window will be affected by this change since all
 # subsequent windows will inherit the font size of the previous window.
-font-size = 16
+font-size = 14
 
 # A repeatable configuration to set one or more font variations values for
 # a variable font. A variable font is a single font, usually with a filename
@@ -1310,7 +1310,7 @@ window-inherit-font-size = true
 # 
 # macOS: To hide the titlebar without removing the native window borders
 #        or rounded corners, use `macos-titlebar-style = hidden` instead.
-window-decoration = false
+window-decoration = true
 
 # The font that will be used for the application's window and tab titles.
 # 
@@ -2143,7 +2143,7 @@ gtk-single-instance = desktop
 # 
 # Changing this value at runtime and reloading the configuration will only
 # affect new windows.
-gtk-titlebar = true
+gtk-titlebar = false
 
 # Determines the side of the screen that the GTK tab bar will stick to.
 # Top, bottom, left, right, and hidden are supported. The default is top.
