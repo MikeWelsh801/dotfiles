@@ -1,47 +1,6 @@
 require("config.snippets")
 
-local cmp = require('cmp')
-
--- `/` cmdline setup.
-cmp.setup.cmdline('/', {
-  mapping = cmp.mapping.preset.cmdline(),
-  sources = {
-    { name = 'buffer' }
-  }
-})
-
--- `:` cmdline setup.
-cmp.setup.cmdline(':', {
-  mapping = cmp.mapping.preset.cmdline({
-    ["<Tab>"] = cmp.mapping.confirm({ select = true }),
-  }),
-  sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    {
-      name = 'cmdline',
-      option = {
-        ignore_cmds = { 'Man', '!' }
-      }
-    }
-  })
-})
-
-cmp.setup({
-  sources = {
-    { name = 'path' },
-    { name = 'nvim_lsp' },
-    { name = 'buffer',  keyword_length = 3 },
-    { name = 'luasnip', keyword_length = 1 },
-  },
-  mapping = cmp.mapping.preset.insert({
-    ["<Tab>"] = cmp.mapping.confirm({ select = true }),
-    ["<C-f>"] = cmp.mapping.confirm({ select = true }),
-    ["<C-Space>"] = cmp.mapping.complete(),
-  }),
-})
-
-local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -67,7 +26,8 @@ require('mason-lspconfig').setup({
           Python = {
             root_dir = {
               "requirements.txt"
-            }
+            },
+            capabilities = lsp_capabilities
           },
         },
       })
@@ -94,6 +54,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+    vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   end
 })
 
