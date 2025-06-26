@@ -28,10 +28,10 @@ return {
       -- Set menu
       dashboard.section.buttons.val = {
         dashboard.button("e", " New file", ":ene <BAR> startinsert <CR>"),
-        dashboard.button("f", " Find file", ":Telescope find_files<CR>"),
-        dashboard.button("x", " Sessions", ":Telescope session-lens<CR>"),
-        dashboard.button("r", " Recent", ":Telescope oldfiles<CR>"),
-        dashboard.button("s", " Settings", ":e $MYVIMRC | :cd %:p:h | :Neotree<CR>"),
+        dashboard.button("f", " Find file", ":lua Snacks.picker.smart()<CR>"),
+        dashboard.button("x", " Sessions", ":SessionSearch<CR>"),
+        dashboard.button("r", " Recent", ":lua Snacks.picker.recent()<CR>"),
+        dashboard.button("s", " Settings", ":lua Snacks.picker.files({ cwd = vim.fn.stdpath('config') })<CR>"),
         dashboard.button("q", "󰗼 Quit NVIM", ":qa<CR>"),
         dashboard.button("t", "💩 Toilet paper", ":PoopFloat<CR>"),
       }

@@ -20,6 +20,7 @@ vim.keymap.set("n", "<leader>dm", function()
 end, { silent = true })
 
 -- *** Mike's remaps ***
+vim.keymap.set("n", "<leader>ms", ":SessionSearch<CR>")
 
 -- I've gotten used to this for switching back
 -- to normal mode, but it's horrendous for certain

@@ -3,6 +3,16 @@ return {
     { "neovim/nvim-lspconfig" },
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
+
+    -- -- Autocompletion
+    -- { "hrsh7th/nvim-cmp" },
+    -- { "hrsh7th/cmp-buffer" },
+    -- { "hrsh7th/cmp-path" },
+    -- { "saadparwaiz1/cmp_luasnip" },
+    -- { "hrsh7th/cmp-nvim-lsp" },
+    -- { "hrsh7th/cmp-nvim-lua" },
+    -- -- command line completes
+    -- { "hrsh7th/cmp-cmdline" },
     {
         'saghen/blink.cmp',
         -- optional: provides snippets for the snippet source
@@ -32,8 +42,8 @@ return {
             -- See :h blink-cmp-config-keymap for defining your own keymap
             keymap = {
                 preset = 'super-tab',
-                ['<C-l>'] = { 'snippet_forward', 'fallback' },
-                ['<C-h>'] = { 'snippet_backward', 'fallback' },
+                ['<C-l>'] = {'snippet_forward', 'fallback'},
+                ['<C-h>'] = {'snippet_backward', 'fallback'},
             },
 
             appearance = {
@@ -60,6 +70,7 @@ return {
         },
         opts_extend = { "sources.default" }
     },
+    
 
     -- Snippets
     { "L3MON4D3/LuaSnip" },

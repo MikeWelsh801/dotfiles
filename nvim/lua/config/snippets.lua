@@ -5,8 +5,8 @@ local fmt = require('luasnip.extras.fmt').fmt
 local i = ls.insert_node
 local rep = require('luasnip.extras').rep
 
-vim.keymap.set({ "i", "s" }, "<C-k>", function() ls.jump(1) end, { silent = true })
-vim.keymap.set({ "i", "s" }, "<C-j>", function() ls.jump(-1) end, { silent = true })
+vim.keymap.set({ "i", "s" }, "<C-l>", function() ls.jump(1) end, { silent = true })
+vim.keymap.set({ "i", "s" }, "<C-h>", function() ls.jump(-1) end, { silent = true })
 
 
 ls.add_snippets("all", {

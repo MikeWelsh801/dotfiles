@@ -61,4 +61,5 @@ return {
       -- log_level = 'debug',
     }
   },
+  -- { dir = '~/projects/AsyncAPIPreview.nvim/', opts = {} }
 }
