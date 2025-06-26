@@ -21,7 +21,7 @@ return {
         { "<leader>fg", function() Snacks.picker.grep() end,                                    desc = "Grep" },
         { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
         { "<leader>td", function() Snacks.picker.todo_comments() end,                           desc = "Todo" },
-        { "<leader>sk", function() Snacks.picker.keymaps() end,                                 desc = "Keymaps" },
+        { "<leader>km", function() Snacks.picker.keymaps() end,                                 desc = "Keymaps" },
         { "<C-p>",      function() Snacks.picker.git_files() end,                               desc = "Find Git Files" },
         { "<leader>fr", function() Snacks.picker.recent() end,                                  desc = "Recent" },
         { "<leader>tt", function() Snacks.picker.explorer() end,                                  desc = "Explorer" },
