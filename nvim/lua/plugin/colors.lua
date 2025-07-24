@@ -13,6 +13,7 @@ return {
   { 'fenetikm/falcon',                     lazy = true, name = 'falcon', },
   { 'karoliskoncevicius/sacredforest-vim', lazy = true, name = 'sacredforest', },
   { 'doums/darcula',                       lazy = true, name = 'darcula', },
+  { 'shaunsingh/nord.nvim',                lazy = true, name = 'nord', },
 
   -- custom color scheme that builds on kanagawa
   {

@@ -67,7 +67,12 @@ return {
           diagnostics.make_buffer(formatter)))
 
       -- move to middle
-      table.insert(el_segments, "%=")
+      -- table.insert(el_segments, "%=")
+
+
+      local builtin = require('el.builtin')
+      -- file name and modified flag
+      table.insert(el_segments, "  %f ")
 
       -- icon
       table.insert(el_segments,
@@ -78,10 +83,8 @@ return {
             return extensions.file_icon(_, buffer)
           end
         ))
-
-      local builtin = require('el.builtin')
       -- file name and modified flag
-      table.insert(el_segments, " %t %m ")
+      table.insert(el_segments, " %m")
       -- move to end
       table.insert(el_segments, "%=")
 
@@ -93,7 +96,12 @@ return {
           function(window, buffer)
             local branch = extensions.git_branch(window, buffer)
             if branch then
-              return " " .. branch
+                if string.len(branch) > 25 then
+                  branch = string.sub(branch, 1, 25) .. "..."
+                end
+              return "( " .. branch
+            else
+              return "( "
             end
           end
         ))
@@ -108,9 +116,12 @@ return {
             local changes = extensions.git_changes(window, buffer)
             if changes then
               return changes
+            else
+                return "[]"
             end
           end
         ))
+      table.insert(el_segments, ") ")
 
       -- readonly_flag and percentage_through_file
       table.insert(el_segments, builtin.readonly_flag)

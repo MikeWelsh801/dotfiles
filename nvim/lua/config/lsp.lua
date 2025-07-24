@@ -2,6 +2,7 @@ require("config.snippets")
 
 local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
 
+---@diagnostic disable-next-line: missing-fields
 require('mason').setup({})
 require('mason-lspconfig').setup({
   automatic_installation = false,
@@ -28,6 +29,26 @@ require('mason-lspconfig').setup({
               "requirements.txt"
             },
             capabilities = lsp_capabilities
+          },
+          typescript = {
+            format = {
+              indentSize = 2,
+              convertTabsToSpaces = true,
+              tabSize = 2,
+            },
+            preferences = {
+              indentStyle = "Smart",
+            },
+          },
+          javascript = {
+            format = {
+              indentSize = 2,
+              convertTabsToSpaces = true,
+              tabSize = 2,
+            },
+            preferences = {
+              indentStyle = "Smart",
+            },
           },
         },
       })

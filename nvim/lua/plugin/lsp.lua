@@ -16,7 +16,7 @@ return {
     {
         'saghen/blink.cmp',
         -- optional: provides snippets for the snippet source
-        dependencies = { 'rafamadriz/friendly-snippets' },
+        dependencies = { 'rafamadriz/friendly-snippets', 'L3MON4D3/LuaSnip' },
 
         -- use a release tag to download pre-built binaries
         version = '1.*',
@@ -42,14 +42,17 @@ return {
             -- See :h blink-cmp-config-keymap for defining your own keymap
             keymap = {
                 preset = 'super-tab',
-                ['<C-l>'] = {'snippet_forward', 'fallback'},
-                ['<C-h>'] = {'snippet_backward', 'fallback'},
+                ['<C-l>'] = { 'snippet_forward', 'fallback' },
+                ['<C-h>'] = { 'snippet_backward', 'fallback' },
             },
 
             appearance = {
                 -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
                 -- Adjusts spacing to ensure icons are aligned
                 nerd_font_variant = 'mono'
+            },
+            snippets = {
+                preset = 'luasnip', -- default, luasnip, mini_snippets
             },
 
             -- (Default) Only show the documentation popup when manually triggered
@@ -70,7 +73,7 @@ return {
         },
         opts_extend = { "sources.default" }
     },
-    
+
 
     -- Snippets
     { "L3MON4D3/LuaSnip" },
