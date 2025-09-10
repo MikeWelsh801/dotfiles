@@ -1,11 +1,11 @@
 -- miscellaneous plugins that don't need much configuration
 return {
   {
-      "MikeWelsh801/scratch.nvim",
-      lazy = true,
-      config = function ()
-          vim.keymap.set('n', '<leader>tp', require("scratch").create_poop_float, {silent = true})
-      end
+    "MikeWelsh801/scratch.nvim",
+    lazy = true,
+    config = function()
+      vim.keymap.set('n', '<leader>tp', require("scratch").create_poop_float, { silent = true })
+    end
   },
   {
     'norcalli/nvim-colorizer.lua',
@@ -23,7 +23,7 @@ return {
   },
 
   -- I don't really like this one, so I'm removing it for now.
-  -- {'tpope/vim-sleuth'}, -- Detect tabstop and shiftwidth automatically
+  -- { 'tpope/vim-sleuth' }, -- Detect tabstop and shiftwidth automatically
 
   -- comments
   {
@@ -61,5 +61,5 @@ return {
       -- log_level = 'debug',
     }
   },
-  -- { dir = '~/projects/AsyncAPIPreview.nvim/', opts = {} }
+  -- { dir = '~/projects/AsyncAPIPreview.nvim/', opts = {} },
 }

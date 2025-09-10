@@ -13,5 +13,8 @@ ls.add_snippets("all", {
   s("tgc", fmt("<{}>{}</{}>", { i(1, "Text"), i(2), rep(1) })),
   s("tgo", fmt("<{}/>", { i(1, "Text") })),
 })
+ls.add_snippets("python", {
+  s("dbgo", fmt("__import__('APNT').logger.debug_obj({})", { i(1, "object") })),
+})
 
 require("luasnip.loaders.from_vscode").lazy_load()

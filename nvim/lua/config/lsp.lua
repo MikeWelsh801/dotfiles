@@ -13,11 +13,17 @@ require('mason-lspconfig').setup({
         capabilities = lsp_capabilities,
         settings = {
           Lua = {
+            format = {
+              indentSize = 2,
+              indentStyle = "space",
+            },
             diagnostics = {
               globals = { 'vim' }
             },
             workspace = {
-              library = vim.api.nvim_get_runtime_file("", true),
+              library = {
+                vim.env.VIMRUNTIME
+              },
               checkThirdParty = false,
             },
             telemetry = {
@@ -28,7 +34,6 @@ require('mason-lspconfig').setup({
             root_dir = {
               "requirements.txt"
             },
-            capabilities = lsp_capabilities
           },
           typescript = {
             format = {
@@ -103,7 +108,7 @@ require('lspconfig').gopls.setup({
     local mod_cache = vim.trim(vim.fn.system 'go env GOMODCACHE')
     if fname:sub(1, #mod_cache) == mod_cache then
       local clients = vim.lsp.get_client_by_id { name = 'gopls' }
-      if #clients > 0 then
+      if clients ~= nil and #clients > 0 then
         return clients[#clients].config.root_dir
       end
     end
