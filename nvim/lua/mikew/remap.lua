@@ -34,7 +34,7 @@ map("i", "jk", "<C-c>")
 -- save faster
 map("n", "<leader>w", ":w", { silent = true })
 -- open neotree
-map("n", "tt", ":Neotree reveal<CR>", { silent = true })
+-- map("n", "tt", ":Neotree reveal<CR>", { silent = true })
 -- turn on spell check
 map("n", "<leader>sp", ":setlocal spell spelllang=en_us<CR>")
 

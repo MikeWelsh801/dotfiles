@@ -24,6 +24,6 @@ return {
         { "<leader>km", function() Snacks.picker.keymaps() end,                                 desc = "Keymaps" },
         { "<C-p>",      function() Snacks.picker.git_files() end,                               desc = "Find Git Files" },
         { "<leader>fr", function() Snacks.picker.recent() end,                                  desc = "Recent" },
-        { "<leader>tt", function() Snacks.picker.explorer() end,                                  desc = "Explorer" },
+        { "tt", function() Snacks.picker.explorer() end,                                  desc = "Explorer" },
     },
 }
