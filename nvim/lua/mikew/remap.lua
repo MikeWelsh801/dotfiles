@@ -116,16 +116,15 @@ KeyResizeEnabled = false
 function ToggleResizeMode()
   if KeyResizeEnabled then
     NormalArrowKeys()
-    KeyResizeEnabled = false
   else
     ResizeArrowKeys()
-    KeyResizeEnabled = true
   end
+  KeyResizeEnabled = not KeyResizeEnabled
 end
 
 -- works as expected, moves cursor
 function NormalArrowKeys()
-  print("Arrrow keys in normal mode.")
+  vim.notify("Arrrow keys in normal mode.", vim.log.levels.INFO)
   map("n", "<Up>", "<Up>")
   map("n", "<Down>", "<Down>")
   map("n", "<Left>", "<Left>")
@@ -134,7 +133,7 @@ end
 
 -- resize windows (note: right/up is bigger, left/down is smaller)
 function ResizeArrowKeys()
-  print("Arrrow keys in resize mode.")
+  vim.notify("Arrrow keys in resize mode.", vim.log.levels.INFO)
   map("n", "<Up>", "<C-w>+")
   map("n", "<Down>", "<C-w>-")
   map("n", "<Left>", "<C-w><")
