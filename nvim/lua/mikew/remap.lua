@@ -25,7 +25,7 @@ map("n", "<leader>dm", function()
 end, { silent = true })
 
 -- *** Mike's remaps ***
-map("n", "<leader>ms", ":SessionSearch<CR>")
+map("n", "<leader>ms", ":Autosession search<CR>")
 
 -- I've gotten used to this for switching back
 -- to normal mode, but it's horrendous for certain

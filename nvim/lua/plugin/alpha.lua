@@ -29,7 +29,7 @@ return {
       dashboard.section.buttons.val = {
         dashboard.button("e", " New file", ":ene <BAR> startinsert <CR>"),
         dashboard.button("f", " Find file", ":lua Snacks.picker.smart()<CR>"),
-        dashboard.button("x", " Sessions", ":SessionSearch<CR>"),
+        dashboard.button("x", " Sessions", ":AutoSession search<CR>"),
         dashboard.button("r", " Recent", ":lua Snacks.picker.recent()<CR>"),
         dashboard.button("s", " Settings", ":lua Snacks.picker.files({ cwd = vim.fn.stdpath('config') })<CR>"),
         dashboard.button("q", "󰗼 Quit NVIM", ":qa<CR>"),
