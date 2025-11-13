@@ -24,6 +24,11 @@ sudo apt install ripgrep
 sudo apt install fd-find
 sudo apt install bat
 
+# setup git credential manager
+sudo apt install make gcc git libsecret-1-0 libsecret-1-dev libglib2.0-dev
+sudo make --directory=/usr/share/doc/git/contrib/credential/libsecret
+git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+
 # setting up neovim config
 cp -a ./nvim/. ~/.config/nvim/
 fish
