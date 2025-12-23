@@ -5,7 +5,7 @@ local map = vim.keymap.set
 map("n", "<leader>pv", vim.cmd.Ex)
 
 -- toggle bettween source and header files
-map("n", "<C-h>", ":ClangdSwitchSourceHeader<CR>", {silent = true})
+map("n", "<C-h>", ":LspClangdSwitchSourceHeader<CR>", {silent = true})
 
 -- go to home screen
 map("n", "<leader>hs", ":Alpha<CR><C-w>o", { silent = true })
