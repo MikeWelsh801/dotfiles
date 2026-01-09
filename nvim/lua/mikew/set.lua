@@ -43,7 +43,7 @@ opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.cmd("set nofoldenable")
 
 -- ***CHANGE TERMINAL THAT OPENS WITH <C-z>***
-opt.shell = "bash"
+opt.shell = "fish"
 opt.shellcmdflag = '-c'
 opt.shellxquote = ''
 

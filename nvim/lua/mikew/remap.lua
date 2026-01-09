@@ -5,7 +5,7 @@ local map = vim.keymap.set
 map("n", "<leader>pv", vim.cmd.Ex)
 
 -- toggle bettween source and header files
-map("n", "<C-h>", ":LspClangdSwitchSourceHeader<CR>", {silent = true})
+map("n", "<C-h>", ":LspClangdSwitchSourceHeader<CR>", { silent = true })
 
 -- go to home screen
 map("n", "<leader>hs", ":Alpha<CR><C-w>o", { silent = true })
@@ -80,28 +80,10 @@ map("n", "<leader>D", "\"+D")
 
 map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 -- reformat buffer
-map("n", "<leader>f", function()
-  -- local pretty_types = {
-  --   "typescriptreact",
-  --   "typescript",
-  --   "javascript",
-  --   "javascriptreact",
-  --   "css",
-  --   "html",
-  --   "markdown",
-  --   "json",
-  -- }
-  -- if vim.tbl_contains(pretty_types, vim.bo.filetype) then
-  --   print("Prettifying...")
-  --   vim.cmd("Format")
-  -- else
-  vim.lsp.buf.format()
-  -- end
-end)
+map("n", "<leader>f", function() vim.lsp.buf.format() end)
 
 -- change every occurance of word in buffer
-map("n", "<leader>s",
-  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- remaps for opening a terminal in vim
 map("n", "<C-z>", "<C-w>s<C-w>j:terminal<CR><C-w>5-jjA", { silent = true })
